@@ -1,0 +1,210 @@
+/* Основные стили страницы */
+.wedding-leader-page {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    padding: 120px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Заголовок страницы */
+.leader-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #cfb765, #fff);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.leader-header h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.leader-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* Основной контент */
+.leader-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.leader-main {
+    flex: 2;
+    min-width: 300px;
+}
+
+.leader-aside {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Блоки с информацией */
+.info-block {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.info-block h2 {
+    color: #cfb765;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #f0e6dd;
+    padding-bottom: 10px;
+}
+
+.info-block p {
+    margin-bottom: 15px;
+}
+
+/* Список преимуществ */
+.benefits-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.benefits-list li:before {
+    content: "✓";
+    color: #d4a373;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Блок с ценами */
+.price-block {
+    background: #f9f1e9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.price-block h3 {
+    color: #d4a373;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.price-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #d4a373;
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.price-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.price-amount {
+    color: #d4a373;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Кнопка заказа */
+.order-btn {
+    display: inline-block;
+    background: #d4a373;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.order-btn:hover {
+    background: #c08a5a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .leader-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .leader-content {
+        flex-direction: column;
+    }
+    
+    .info-block {
+        padding: 20px;
+    }
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 220px;
+}
+
+.dropdownMenu li {
+    list-style: none;
+    margin: 0;
+}
+
+.dropdownMenu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu li a:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.dropdown:hover .dropdownMenu {
+    display: block;
+}
+
+

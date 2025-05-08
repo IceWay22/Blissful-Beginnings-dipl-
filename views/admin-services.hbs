@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Управление услугами</title>
+</head>
+<body>
+    <h1>Управление услугами</h1>
+    
+    <div class="admin-nav">
+        <a href="/admin" class="btn">На главную админки</a>
+        <a href="/admin-gener-pdf" class="btn">Заявки PDF</a>
+        <a href="/admin-logout" class="btn btn-dangers">Выйти</a>
+    </div>
+
+    <h2>Добавить новую услугу</h2>
+    <form class="add-form" action="/add-service" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">Название:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="description">Описание:</label>
+            <textarea id="description" name="description" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="link">Ссылка:</label>
+            <input type="text" id="link" name="link" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="image">Изображение:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+        </div>
+        
+        <button type="submit" class="btn">Добавить услугу</button>
+    </form>
+
+    <h2>Список услуг</h2>
+    <div class="services-grid">
+        {{#each services}}
+        <div class="service-card">
+            <img src="{{this.image}}" alt="{{this.title}}">
+            <div class="service-info">
+                <h3>{{this.title}}</h3>
+                <p>{{this.description}}</p>
+                <p>Ссылка: {{this.link}}</p>
+                
+                <form action="/delete-service/{{this._id}}" method="POST" class="inline-form">
+                    <button type="submit" class="btn btn-danger">Удалить</button>
+                </form>
+                
+                <button class="btn btn-edit" onclick="openEditModal('{{this._id}}', '{{this.title}}', '{{this.description}}', '{{this.link}}')">Редактировать</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <!-- Модальное окно редактирования -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h2>Редактировать услугу</h2>
+            <form id="editForm" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="editTitle">Название:</label>
+                    <input type="text" id="editTitle" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editDescription">Описание:</label>
+                    <textarea id="editDescription" name="description" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editLink">Ссылка:</label>
+                    <input type="text" id="editLink" name="link" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editImage">Новое изображение (оставьте пустым, чтобы не менять):</label>
+                    <input type="file" id="editImage" name="image" accept="image/*">
+                </div>
+                
+                <button type="submit" class="btn">Сохранить изменения</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openEditModal(id, title, description, link) {
+            document.getElementById('editTitle').value = title;
+            document.getElementById('editDescription').value = description;
+            document.getElementById('editLink').value = link;
+            document.getElementById('editForm').action = `/update-service/${id}`;
+            document.getElementById('editModal').style.display = 'block';
+        }
+        
+        function closeEditModal() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+        
+        // Закрытие модального окна при клике вне его
+        window.onclick = function(event) {
+            const modal = document.getElementById('editModal');
+            if (event.target == modal) {
+                closeEditModal();
+            }
+        }
+    </script>
+</body>
+</html>

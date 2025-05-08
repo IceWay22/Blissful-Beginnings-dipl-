@@ -1,0 +1,256 @@
+.containerss {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #cfb765;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Секция с чек-листом */
+.wedding-checklist {
+    background-color: #f9f9f9;
+    padding: 100px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+/* Чек-лист */
+.checklist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checklist-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checklist-item label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Кнопка проверки */
+#checkMissingButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#checkMissingButton:hover {
+    background-color: #1976d2;
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto; /* Добавляем прокрутку для всего модального окна */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    max-height: 80vh; /* Ограничиваем высоту контента */
+    overflow-y: auto; /* Добавляем прокрутку для контента */
+    margin: 20px 0; /* Отступы для красоты */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal h3 {
+    color: #ff6f61;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    top: 0;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+.modal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal li {
+    font-size: 1rem;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.modal button {
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.modal button:hover {
+    background-color: #1976d2;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+    z-index: 2;
+    background: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-modal:hover {
+    color: #ff6f61;
+    background: #f5f5f5;
+}
+
+/* Форма помощи */
+#helpFormModal .modal-content {
+    background-color: #e3f2fd;
+}
+
+#helpFormModal h3 {
+    color: #2196f3;
+}
+
+#helpFormModal input, #helpFormModal textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#helpFormModal button[type="submit"] {
+    background-color: #2196f3;
+}
+
+#helpFormModal button[type="submit"]:hover {
+    background-color: #1976d2;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 220px;
+}
+
+.dropdownMenu li {
+    list-style: none;
+    margin: 0;
+}
+
+.dropdownMenu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu li a:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.dropdown:hover .dropdownMenu {
+    display: block;
+}
+
+.responsibility-section {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.responsibility-title {
+    color: #d4af37;
+    border-bottom: 2px solid #f0e6d2;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.bride-title { border-left: 4px solid #ffb6c1; padding-left: 15px; }
+.groom-title { border-left: 4px solid #add8e6; padding-left: 15px; }
+.together-title { border-left: 4px solid #98fb98; padding-left: 15px; }
+.organizer-title { border-left: 4px solid #e6e6fa; padding-left: 15px; }
+.family-title { border-left: 4px solid #ffd700; padding-left: 15px; }

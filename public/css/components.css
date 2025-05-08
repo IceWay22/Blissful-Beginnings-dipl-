@@ -1,0 +1,274 @@
+
+.section{
+    margin-top: 35px;
+    overflow-x: hidden;
+}
+
+.sectionPage{
+    margin-top: 120px;
+}
+
+.titlePage h1{
+    color: #cfb765;
+    font-size: 48px;
+    font-weight: 100;
+}
+
+.titlePage p{
+    margin-top: 5px;
+    color: #999;
+}
+
+.lineContent{
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+.line{
+    width: 150px;
+    background: #cfb765;
+}
+
+.breadcrumbs{
+    display: flex;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.breadcrumbs a{
+    color: #cfb765;
+}
+
+.breadcrumbs span{
+    margin: 0 5px;
+    color: #cfb765;
+}
+
+.breadcrumbs p{
+    color: #999;
+}
+
+.btnBorderWhite{
+    display: inline-block;
+    border-radius: 80px;
+    background: none;
+    border: 1px solid #fff;
+    padding: 14px 28px;
+    color: #fff;
+    font-weight: 500;
+    transition: .4s;
+}
+
+.btnBorderWhite:hover{
+    background: #cfb765;
+    border: 1px solid #cfb765;
+    color: #fff;
+}
+
+.btnBackground{
+    display: inline-block;
+    border-radius: 80px;
+    background: #cfb765;
+    border: 1px solid #cfb765;
+    padding: 14px 28px;
+    color: #fff;
+    font-weight: 500;
+    transition: .4s;
+}
+
+.btnBackground:hover{
+    background: none;
+    border: 1px solid #cfb765;
+    color: #cfb765;
+}
+
+.titleSection{
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+.titleSection h2{
+    color: #cfb765;
+    font-weight: 100;
+    font-size: 48px;
+}
+
+.titleSection p{
+    margin-top: 15px;
+    color: #999;
+    font-size: 14px;
+    width: 380px;
+}
+
+
+.justifyContentCenter{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.serviceContainer{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.serviceItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #A19467;
+    width: 360px;
+    height: 360px;
+    position: relative;
+    transition: .4s;
+    margin-top: 40px;
+}
+
+.serviceItemImg{
+    width: 300px;
+    height: 300px;
+    transition: .4s;
+    position: relative;
+}
+
+.serviceItemImgMask{
+    background: #00000041;
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.serviceItemImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.serviceItem:hover .serviceItemImg{
+    width: 100%;
+    height: 100%;
+}
+
+.serviceItemImgText{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.serviceItemImgText p{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.serviceItemImgText .btnBorderWhite{
+    margin-top: 15px;
+}
+
+.serviceBtnMore{
+    margin-top: 40px;
+}
+
+@media(min-width: 320px) and (max-width: 720px){
+    
+    .sectionPage{
+        margin-top: 60px;
+    }
+
+    .titlePage h1{
+        font-size: 38px;
+    }
+
+    .titleSection h2{
+        font-size: 32px;
+    }
+    
+    .titleSection p{
+        width: 100%;
+    }
+
+    /* service */
+
+    .serviceContainer{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    .serviceItem{
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+    }
+    
+    .serviceItemImg{
+        width: 260px;
+        height: 260px;
+    }
+    
+}
+
+@media(min-width: 720px) and (max-width: 1200px){
+    /* service */
+
+    .serviceContainer{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .serviceItem{
+        width: 320px;
+        height: 320px;
+        margin-top: 30px;
+    }
+    
+    .serviceItemImg{
+        width: 280px;
+        height: 280px;
+    }
+
+    .serviceItemImgText{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .serviceItemImgText p{
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
+    }
+    
+    .serviceItemImgText .btnBorderWhite{
+        margin-top: 15px;
+    }
+    
+}

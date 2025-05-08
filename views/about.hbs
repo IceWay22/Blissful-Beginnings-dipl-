@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <title>Blissful Beginnings - О нас</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="headerBody">
+                <div class="headerLogo">
+                    <p>Blissful Beginnings</p>
+                </div>
+
+                <div class="headerBurger">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="headerMenu">
+                    <ul class="headerList">
+                        <li><a href="/" class="headerLink">Главная</a></li>
+                        <li class="dropdown">
+                            <a href="/uslugi" class="headerLink dropdownToggle">Услуги</a>
+                            <ul class="dropdownMenu">
+                                <li><a href="/uslugi_koordinaciya" class="headerLink">Координация свадьбы</a></li>
+                                <li><a href="/uslugi_dekor" class="headerLink">Декор и флористика</a></li>
+                                <li><a href="/uslugi_foto" class="headerLink">Фото и видеосъемка</a></li>
+                                <li><a href="/uslugi_banket" class="headerLink">Торт и банкет</a></li>
+                                <li><a href="/uslugi" class="headerLink">.....</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/about" class="headerLink">О нас</a></li>
+                        <li><a href="/otzyvy" class="headerLink">Отзывы</a></li>    
+                        <li><a href="/checklist" class="headerLink">To do list</a></li>                     
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h1>О нас</h1>
+            <div class="aboutContent">
+                <div class="aboutText">
+                    <h2>Наша миссия</h2>
+                    <p>Мы — команда профессионалов, которые любят свое дело и стремятся к совершенству в каждом детале. Наша миссия — превратить ваши мечты о идеальном дне в реальность, создавая события, которые будут греть ваше сердце долгие годы.</p>
+                    <p>С нами ваш день станет не просто свадьбой, а настоящим праздником любви и счастья.</p>
+
+                    <h2>Главные принципы работы нашего агентства:</h2>
+                    <ul>
+                        <li><strong>Прозрачность.</strong> Все процессы работы агентства и подрядчиков максимально понятны и прозрачны.</li>
+                        <li><strong>Безупречный сервис.</strong> Пунктуальность, оперативность и связь с вами 24/7.</li>
+                        <li><strong>Качество.</strong> Мы тщательным образом отбирали подрядчиков, с которыми сотрудничаем, и с гордостью можем сказать, что среди них настоящие профессионалы.</li>
+                        <li><strong>Отсутствие стресса.</strong> Мы находим выход из любой сложной ситуации и делаем это в кратчайшие сроки, при этом не задействуя жениха и невесту. Даём им возможность максимально насладиться своим праздником.</li>
+                        <li><strong>Оптимизация.</strong> Мы подскажем, на чем можно и нужно экономить при подготовке к свадьбе, а на чём этого делать категорически нельзя.</li>
+                        <li><strong>Индивидуальность.</strong> Разрабатывая концепцию свадьбы, мы создаём мероприятие лично «про вас» и вашу историю любви.</li>
+                        <li><strong>Корректность.</strong> Мы никогда не позволим себе грубости и нетактичного отношения по отношению к молодоженам и гостям. Вежливость и корректность для нас превыше всего.</li>
+                    </ul>
+                </div>
+                <div class="aboutImg">
+                    <img src="/img/about/gf.jpg" alt="О нас">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h2>Наша команда</h2>
+            <div class="teamMembers">
+                {{#each about.team}}
+                    <div class="teamMember">
+                        <img src="{{this.image}}" alt="{{this.name}}">
+                        <h3>{{this.name}}</h3>
+                        <p>{{this.position}}</p>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerTop">
+            <div class="container">
+                <div class="footerContainer">
+                    <div class="footerItem">
+                        <p>Мы находимся по адресу</p>
+                        <p>г. Брянск, ул. Ленина, д. 1</p>
+                    </div>
+                    <div class="footerItem">
+                        <p>Контакты</p>
+                        <a href="tel:+7(915)56-31-19">+7(915)56-31-19</a>
+                        <a href="tel:+7(123)41-21-42">+7(123)41-21-42</a>
+                        <a href="tel:+7(412)81-23-32">+7(412)81-23-32</a>
+                    </div>
+                    <div class="footerItem">
+                        <p>Мы в социальных сетях</p>
+                        <a href="https://t.me"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                        <a href="https://vk.com"><i class="fab fa-vk"></i> ВКонтакте</a>
+                        <a href="https://wa.me"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

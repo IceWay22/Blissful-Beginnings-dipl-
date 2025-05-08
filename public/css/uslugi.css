@@ -1,0 +1,155 @@
+.services {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.services h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #cfb765;
+}
+
+.serviceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.serviceItem {
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    padding-bottom: 60px; 
+}
+
+.serviceItem .btnBorderWhite {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #cfb765;
+    border: 2px solid #cfb765;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.serviceItem .btnBorderWhite:hover {
+    background-color: #cfb765;
+    color: #fff;
+}
+
+.serviceItem:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.serviceItem img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.serviceItem h2 {
+    padding: 20px 20px 10px;
+    font-size: 24px;
+    text-align: center;
+    color: #48516D;
+}
+
+.serviceItem p {
+    padding: 0 20px 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #777;
+}
+
+.serviceItem a {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px 20px;
+    border: 2px solid #cfb765;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #cfb765;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.serviceItem a:hover {
+    background-color: #cfb765;
+    color: #fff;
+}
+
+
+.serviceItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.serviceItem:hover::before {
+    opacity: 1;
+}
+
+.serviceItem h2, .serviceItem p {
+    position: relative;
+    z-index: 1;
+}
+
+.serviceItem a {
+    z-index: 2;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 220px;
+}
+
+.dropdownMenu li {
+    list-style: none;
+    margin: 0;
+}
+
+.dropdownMenu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu li a:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.dropdown:hover .dropdownMenu {
+    display: block;
+}

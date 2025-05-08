@@ -1,0 +1,147 @@
+.about {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.about h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #cfb765;
+}
+
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aboutText {
+    flex: 1;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutText h2 {
+    font-size: 24px;
+    color: #48516D;
+    margin-bottom: 20px;
+}
+
+.aboutText p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.aboutText ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #777;
+}
+
+.aboutText ul li {
+    margin-bottom: 10px;
+}
+
+.aboutImg {
+    flex: 1;
+    margin: 10px;
+}
+
+.aboutImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.team h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #cfb765;
+}
+
+.teamMembers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.teamMember {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teamMember img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.teamMember h3 {
+    font-size: 20px;
+    color: #48516D;
+    margin-bottom: 5px;
+}
+
+.teamMember p {
+    font-size: 16px;
+    color: #777;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 220px;
+}
+
+.dropdownMenu li {
+    list-style: none;
+    margin: 0;
+}
+
+.dropdownMenu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu li a:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.dropdown:hover .dropdownMenu {
+    display: block;
+}

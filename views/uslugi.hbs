@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/uslugi.css">
+    <title>Blissful Beginnings - Услуги</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="headerBody">
+                <div class="headerLogo">
+                    <p>Blissful Beginnings</p>
+                </div>
+
+                <div class="headerBurger">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="headerMenu">
+                    <ul class="headerList">
+                        <li><a href="/" class="headerLink">Главная</a></li>
+                        <li class="dropdown">
+                            <a href="/uslugi" class="headerLink dropdownToggle">Услуги</a>
+                            <ul class="dropdownMenu">
+                                <li><a href="/uslugi_koordinaciya" class="headerLink">Координация свадьбы</a></li>
+                                <li><a href="/uslugi_dekor" class="headerLink">Декор и флористика</a></li>
+                                <li><a href="/uslugi_foto" class="headerLink">Фото и видеосъемка</a></li>
+                                <li><a href="/uslugi_banket" class="headerLink">Торт и банкет</a></li>
+                                <li><a href="/uslugi" class="headerLink">.....</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/about" class="headerLink">О нас</a></li>
+                        <li><a href="/otzyvy" class="headerLink">Отзывы</a></li>    
+                        <li><a href="/checklist" class="headerLink">To do list</a></li>                     
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <section class="services">
+    <div class="container">
+        <h1>Наши услуги</h1>
+        <div class="serviceGrid">
+            {{#each services}}
+            <div class="serviceItem">
+                <img src="{{this.image}}" alt="{{this.title}}">
+                <h2>{{this.title}}</h2>
+                <p>{{this.description}}</p>
+                <a href="{{this.link}}" class="btnBorderWhite">Подробнее</a>
+            </div>
+            {{/each}}
+        </div> 
+    </div>
+</section>
+
+    <footer>
+        <div class="footerTop">
+            <div class="container">
+                <div class="footerContainer">
+    
+                    <div class="footerItem">
+                        <p>Мы находимся по адресу</p>
+                        <p>г. Брянск, ул. Ленина, д. 1</p>
+                    </div>
+    
+                    <div class="footerItem">
+                        <p>Контакты</p>
+                        <a href="tel:+7(915)56-31-19">+7(915)56-31-19</a>
+                        <a href="tel:+7(123)41-21-42">+7(123)41-21-42</a>
+                        <a href="tel:+7(412)81-23-32">+7(412)81-23-32</a>
+                    </div>
+    
+                    <div class="footerItem">
+                        <p>Мы в социальных сетях</p>
+                        <a href="https://t.me"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                        <a href="https://vk.com"><i class="fab fa-vk"></i> ВКонтакте</a>
+                        <a href="https://wa.me"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
