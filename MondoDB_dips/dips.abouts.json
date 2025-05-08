@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "677ac1f4871cb9c6a3b89ce1"
+  },
+  "team": [
+    {
+      "name": "Анна Иванова",
+      "position": "Основатель и креативный директор",
+      "image": "/img/team/anna.jpg",
+      "_id": {
+        "$oid": "6776ca80b2aedd174722182c"
+      }
+    },
+    {
+      "name": "Иван Петров",
+      "position": "Организатор мероприятий",
+      "image": "/img/team/ivan.jpg",
+      "_id": {
+        "$oid": "6776ca80b2aedd174722182d"
+      }
+    },
+    {
+      "name": "Мария Сидорова",
+      "position": "Флорист и декоратор",
+      "image": "/img/team/mapia.jpg",
+      "_id": {
+        "$oid": "6776ca80b2aedd174722182e"
+      }
+    },
+    {
+      "name": "Дмитрий Козлов",
+      "position": "Фотограф и видеограф",
+      "image": "/img/team/dmitr.jpg",
+      "_id": {
+        "$oid": "6776ca80b2aedd174722182f"
+      }
+    }
+  ],
+  "__v": 22
+}]
